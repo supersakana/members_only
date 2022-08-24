@@ -15,10 +15,8 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    p "THESE ARE THE POST_PARAMS"
-    p post_params
 
-    if @post.save!
+    if @post.save
        redirect_to root_path
     else
       render :new, status: :unprocessable_entity

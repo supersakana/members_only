@@ -1,0 +1,26 @@
+<h1>All Posts</h1>
+<ul>
+  <%= link_to new_post_path do %>
+    <li>New post</li>
+  <% end %>
+
+  <%= link_to new_user_path do %>
+    <li>Sign Up</li>
+  <% end %>
+</ul>
+
+<div class="all-posts">
+  <% @posts.reverse.each do |post| %>
+        <div>
+          <li>
+            <span><strong><%= post.user.username %></strong></span>
+            <br>
+            <span><%= post.title %></span>
+            <br>
+            <span><%= post.body %></span>
+          </li>
+        </div>
+        <br><br>
+    <% end %>
+
+</div>
