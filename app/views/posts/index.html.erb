@@ -1,13 +1,4 @@
-<h1>All Posts</h1>
-<ul>
-  <%= link_to new_post_path do %>
-    <li>New post</li>
-  <% end %>
-
-  <%= link_to new_user_path do %>
-    <li>Sign Up</li>
-  <% end %>
-</ul>
+<%= render 'nav' %>
 
 <div class="all-posts">
   <% @posts.reverse.each do |post| %>
