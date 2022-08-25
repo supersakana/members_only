@@ -1,9 +1,9 @@
-<nav>
+<nav class="flex justify-between items-center px-2 md:px-20 py-5">
     <%= link_to root_path do %>
-    <h1 class="logo">MembersOnly</h1>
+    <h1 class="text-3xl font-bold">MembersOnly</h1>
     <% end %>
 
-    <ul class="nav-items">
+    <ul class="flex space-x-5 text-lg">
         <% if current_user %>
             <li class="nav-item">
             <%= link_to current_user.username, edit_user_registration_path, class: "nav-link" %>
