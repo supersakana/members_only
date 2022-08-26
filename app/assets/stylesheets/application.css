@@ -18,3 +18,16 @@
  html, body{
     font-family: 'Outfit', sans-serif;
  }
+
+ /* Global From Styles */
+ form{
+   color: #202020;
+ }
+
+ em,
+ i,
+ label,
+ button[type="submit"],
+ input[type="submit"]{
+   color: #ffffff
+ }
