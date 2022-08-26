@@ -2,8 +2,12 @@
 
 <div class="grid md:grid-cols-3">
   <% @posts.reverse.each do |post| %>
-        <div class="shadow-xl h-40 p-5 mx-3 my-5 bg-slate-700 rounded-md">
-          <span class="font-bold"><%= post.user.username %></span>
+        <div class="shadow-xl h-40 p-5 m-5 bg-slate-700 rounded-md">
+          <% if current_user %>
+            <span class="font-bold"><%= post.user.username %></span>
+          <% else %>
+            <span class="font-bold"><%= "Anonymous" %></span>
+          <% end %>
           <br class="mb-1">
           <span class="text-lg"><%= post.title %></span>
           <br>
