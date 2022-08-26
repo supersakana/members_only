@@ -1,17 +1,13 @@
 <%= render 'nav' %>
 
-<div class="">
+<div class="grid md:grid-cols-3">
   <% @posts.reverse.each do |post| %>
-        <div>
-          <li>
-            <span><strong><%= post.user.username %></strong></span>
-            <br>
-            <span><%= post.title %></span>
-            <br>
-            <span><%= post.body %></span>
-          </li>
+        <div class="shadow-xl h-40 p-5 mx-3 my-5 bg-slate-700 rounded-md">
+          <span class="font-bold"><%= post.user.username %></span>
+          <br class="mb-1">
+          <span class="text-lg"><%= post.title %></span>
+          <br>
+          <span class="text-slate-300"><%= post.body %></span>
         </div>
-        <br><br>
     <% end %>
-
 </div>
